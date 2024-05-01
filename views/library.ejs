@@ -1,0 +1,22 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+<h1 class="text-center">This is Library Page</h1>
+
+<div class="d-flex flex-nowrap justify-content-evenly">
+  <% books.forEach(function(book,index){ %>
+    <div class="card mb-3" style="width: 21rem; margin-right: 10px;">
+      <div class="card-body" style="text-align: center;">
+        <img style="margin: auto; display: block; height: 200px; object-fit: cover;" src="/images/<%= book.image %>" alt="">
+        <h5 class="card-title"><%= book.name %></h5>
+        <p class="card-text"><%= book.author %></p>
+        <a href="#" class="btn btn-primary"><%= book.price %></a>
+        <a href="/delete/<%= book._id%>" class="btn btn-danger">Delete Book</a>
+        <a href="/update/<%= book._id%>" class="btn btn-info">Update Book</a>      
+      </div>
+      
+    </div>
+  <% }) %>
+</div>
+
+
+<%- include("./partials/footer") %>

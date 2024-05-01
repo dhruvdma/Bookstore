@@ -1,0 +1,55 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+<h1 class="text-center">This is Entry Page</h1>
+<form action="/create" method="post" enctype="multipart/form-data">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="image" class="form-label">Book Image</label>
+          <input type="file" class="form-control" id="image" name="image">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Book Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Book Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author Name</label>
+          <input type="text" class="form-control" id="author" name="author" placeholder="Author Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Book Price</label>
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="number" class="form-control" id="price" name="price" placeholder="Book Price" required>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="category" class="form-label">Book Category</label>
+          <input type="text" class="form-control" id="category" name="category" placeholder="Book Category">
+        </div>
+        <div class="mb-3">
+          <label for="language" class="form-label">Book Language</label>
+          <input type="text" class="form-control" id="language" name="language" placeholder="Book Language">
+        </div>
+        <div class="mb-3">
+          <label for="quantity" class="form-label">Book Quantity</label>
+          <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Book Quantity">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="5" placeholder="Enter Description Here"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<%- include("./partials/footer") %>
